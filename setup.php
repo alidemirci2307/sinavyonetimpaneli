@@ -1,17 +1,15 @@
 <?php
+require_once __DIR__ .'/admin/pojos/Ayarlar.php';
 
 $uygulamanin_adi = "Sınav Yönetim Paneli";
-$paket_adi = "com.demirci.deneme";
-$ulke = "Türkiye";
+$paket_adi = "com.demirci.deneme2";
 
 
 global $db;
 
-$data = [
-    'uygulamanin_adi' => $uygulamanin_adi,
-    'paket_adi' => $paket_adi,
-    'ulke' => $ulke
-];
-$db->collection('ayarlar')->document('uygulama')->set($data);
+$ayarlar_uygulama = new Ayarlar();
+$ayarlar_uygulama->uygulamaninAdi = $uygulamanin_adi;
+$ayarlar_uygulama->paketAdi = $paket_adi;
+$ayarlar_uygulama->firebaseUpdate();
 
 

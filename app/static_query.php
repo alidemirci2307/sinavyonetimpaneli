@@ -1,4 +1,5 @@
 <?php
-global $db;
-$docRef = $db->collection('ayarlar')->document('uygulama');
-$ayarlar_uygulama = $docRef->snapshot();
+require_once __DIR__ .'/../admin/pojos/Ayarlar.php';
+
+$ayarlar = new Ayarlar();
+

@@ -2,4 +2,4 @@
 
 define('PATH',realpath('.'));
 define('SUBFOLDER',true);
-define('URL','https://localhost/sinavyonetimpaneli');
+define('URL','http://localhost/sinavyonetimpaneli');

@@ -10,9 +10,9 @@ function admin_view($viewName){
 }
 
 function admin_url($url = false){
-    return URL . '/' . $url;
+    return URL . '/admin/' . $url;
 }
 
 function admin_public_url($url = false){
-    return URL . '/public/' . $url;
+    return URL . '/admin/public/' . $url;
 }
